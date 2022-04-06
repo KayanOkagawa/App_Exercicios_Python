@@ -1,0 +1,23 @@
+<Gerenciador_screen>:
+    Menu_screen:
+
+<Menu_screen>:
+    name: 'menu'
+    FloatLayout:
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size: 760, 720
+        canvas:
+            Color:
+                rgba: 1,1,1,1
+            Rectangle:
+                source: '_img/background.png'
+                size: 500, 720
+                pos: self.pos
+        Image:
+            source: '_img/cursoemvideo-logo2.png'
+            size_hint: 0.25, 0.25
+            pos_hint: {'center_x': 0.18, 'center_y': 0.8}
+        Image:
+            source: '_img/guana.png'
+            size_hint: 0.6, 0.6
+            pos_hint: {'center_x': 0.18, 'center_y': 0.3}
