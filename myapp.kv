@@ -13,10 +13,14 @@
                 source: '_img/background.png'
                 size: 500, 720
                 pos: self.pos
-        Image:
-            source: '_img/cursoemvideo-logo2.png'
-            size_hint: 0.25, 0.25
+        Button:
+            name: 'logo_link'
+            background_normal: '_img/cursoemvideo-logo2.png'
+            background_down: '_img/cursoemvideo-logo2press.png'
+            border: 0, 0, 0, 0
+            size_hint: 0.3, 0.18
             pos_hint: {'center_x': 0.18, 'center_y': 0.8}
+            on_press: print(root.url_open(self.name))
         Image:
             source: '_img/guana.png'
             size_hint: 0.6, 0.6

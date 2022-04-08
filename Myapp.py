@@ -18,7 +18,11 @@ class Gerenciador_screen(ScreenManager):
 
 
 class Menu_screen(Screen):
-    pass
+    from _utilidade_myapp import url_open
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
 
 # Classe principal do aplicativo
 
