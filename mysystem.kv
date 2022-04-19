@@ -1,0 +1,72 @@
+<Gerenciador_screen>:
+    Menu_screen:
+
+<Menu_screen>:
+    name: 'menu'
+
+    FloatLayout:
+        id: layout_esq
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        size: 760, 720
+        canvas:
+            Color:
+                rgba: 1,1,1,1
+            Rectangle:
+                source: '_img/background.png'
+                size: 500, 720
+                pos: self.pos
+
+        Button:
+            id: logo_botao
+            name: 'logo_link'
+            background_normal: '_img/cursoemvideo-logo2.png'
+            background_down: '_img/cursoemvideo-logo2press.png'
+            border: 0, 0, 0, 0
+            size_hint: 0.3, 0.18
+            pos_hint: {'center_x': 0.18, 'center_y': 0.8}
+            on_press: root.abrir_pagina(self.name)
+
+        Image:
+            id: img_guana
+            source: '_img/guana.png'
+            size_hint: 0.6, 0.6
+            pos_hint: {'center_x': 0.18, 'center_y': 0.3}
+
+    FloatLayout:
+        id: layout_dir
+        pos_hint: {'center_x': 0.7, 'center_y': 0.5}
+        size_hint: 0.5, 0.8
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            id: label_index
+            name: '1'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+            text: 'Exercício - 1'
+
+        Button:
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.3, 'center_y': 0.15}
+            text: 'Anterior'
+            on_press: root.indice_ex(2)
+
+        Button:
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.7, 'center_y': 0.15}
+            text: 'Próximo'
+            on_press: root.indice_ex(1)
+
+        ScrollView:
+            pos_hint: {'center_x': 0.85, 'center_y': 0.5}
+            size_hint: 0.6, 0.3
+
+            BoxLayout:
+                id: box_ex
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+
